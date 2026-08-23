@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Birthday Post</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #111112;
+        }
+        iframe {
+            width: 100%; height: 100%; border: none; display: block;
+        }
+        #welcome-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #111112; z-index: 9999; display: flex;
+            justify-content: center; align-items: center; cursor: pointer;
+            transition: opacity 1s ease; color: #c7c7cc;
+        }
+        #welcome-overlay h1 {
+            font-family: 'Great Vibes', cursive; font-size: 60px;
+            background: linear-gradient(to right, #e0e0e0 0%, #ffffff 40%, #888888 60%, #e0e0e0 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            text-align: center; padding: 20px; text-shadow: none;
+        }
+        @media(max-width:768px){
+            #welcome-overlay h1 { font-size: 45px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Persistent Audio Player -->
+    <audio id="bg-music" loop>
+        <source src="Audio/audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Welcome Overlay -->
+    <div id="welcome-overlay">
+        <h1>Click to Open Your Birthday Post ❤️</h1>
+    </div>
+
+    <!-- The Iframe that loads the actual pages -->
+    <iframe id="content-frame" src="page1.html"></iframe>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        const overlay = document.getElementById('welcome-overlay');
+
+        overlay.addEventListener('click', function() {
+            // Hide overlay
+            this.style.opacity = '0';
+            setTimeout(() => { this.style.display = 'none'; }, 1000);
+            
+            // Start audio from 0:09
+            music.currentTime = 9; 
+            music.volume = 0.5;
+            music.play().catch(err => console.log("Audio play prevented: ", err));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #111112; /* Deep matte black */
+    font-family: 'cormorant Garamodn', serif;
+    display: flex;
+    justify-content: center;
+    padding: 22px;
+    color: #c7c7cc;
+}
+
+body.locked {
+    overflow: hidden;
+}
+
+#welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #111112;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+
+#welcome-overlay h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    /* Chrome text effect */
+    background: linear-gradient(to right, #e0e0e0 0%, #ffffff 40%, #888888 60%, #e0e0e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: none; /* No pulse, keep it static and elegant */
+    text-shadow: none; /* No glow */
+    text-align: center;
+    padding: 20px;
+}
+
+.newspaper{
+    background: #1c1c1e; /* Matte charcoal */
+    width: 1000px;
+    padding: 40px;
+    box-shadow: 10px 10px 30px rgba(0,0,0,.8); /* Sharp dark shadow */
+    animation: fadeIn 2.5s ease-in-out;
+    border: 1px solid #3a3a3c; /* subtle matte border */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.logo{
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 80px;
+    text-align: center;
+    font-weight: normal;
+    letter-spacing: 2px;
+    /* Chrome text */
+    background: linear-gradient(to bottom, #ffffff 0%, #a0a0a5 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    color: #8e8e93; /* Matte grey */
+}
+
+hr{
+    margin: 15px 0;
+    border: 0;
+    border-top: 1px solid #3a3a3c;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px;
+    letter-spacing: 3px;
+    color: #e0e0e0;
+}
+
+h3{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Great Vibes', cursive;
+    font-weight: normal;
+    margin-bottom: 40px;
+    color: #a0a0a5; /* Silver */
+}
+
+.content{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1.5fr;
+    gap: 35px;
+}
+
+.sidebar {
+    border-right: 2px solid #3a3a3c;
+    padding-right: 20px;
+}
+
+.sidebar-title {
+    font-size: 22px;
+    border-bottom: 1px solid #3a3a3c;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    color: #d1d1d6;
+}
+
+.sidebar p {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+    color: #aeaeb2;
+}
+
+.caption{
+    text-align: center;
+    margin: 12px 0;
+    font-size: 24px;
+    border-bottom: 2px solid #3a3a3c;
+    padding-bottom: 8px;
+    color: #d1d1d6;
+}
+
+.left p{ 
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #aeaeb2;
+}
+
+.right p{
+    padding-top: 20px;
+    font-size: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #aeaeb2;
+}
+
+.right h4{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-style: italic;
+    color: #d1d1d6;
+}
+
+h4 span{
+    font-size: 28px ;
+}
+
+
+footer{
+    text-align:center;
+    margin-top:10px;
+    border-top:2px solid #3a3a3c;
+    padding-top:10px;
+}
+
+footer a{
+    text-decoration:none;
+    color: #e0e0e0;
+    font-size:20px;
+    font-weight:bold;
+    transition:.3s;
+    background: linear-gradient(to right, #e0e0e0 0%, #888888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer a:hover{
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+@media(max-width:768px){
+    .newspaper{
+        width:100%;
+        padding:20px;
+    }
+    .content{
+        grid-template-columns:1fr;
+    }
+    .sidebar {
+        border-right: none;
+        border-bottom: 2px solid #3a3a3c;
+        padding-right: 0;
+        padding-bottom: 20px;
+    }
+    .logo{ font-size:45px; }
+    h2{ font-size:40px; }
+    h3{ font-size:40px; }
+    .left p, .right p{ font-size:20px; }
+}
