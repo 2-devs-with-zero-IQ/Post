@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XXIV</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="M-style.css">
+</head>
+
+<body>
+
+    <canvas id="confetti"></canvas>
+
+    <div class="hero">
+
+        <h1>Our Beautiful Memories </h1>
+
+        <p>
+            Every memory with you is my favorite.
+        </p>
+
+        <div class="scroll">
+            ↓ Scroll Down ↓
+        </div>
+
+    </div>
+
+    <section class="timeline">
+
+        <div class="card">
+
+            <h2> The Day We Met</h2>
+
+            <p>
+                I didn't know that meeting you would become one of the best moments of my life.</p>
+
+            <img src="Photos/photo1.jpeg">
+
+        </div>
+
+        <div class="card">
+
+            <h2>Our First Long Conversation</h2>
+
+            <p>
+                Hours felt like minutes when I talked to you.
+            </p>
+
+            <img src="Photos/photo2.jpg">
+
+        </div>
+
+        <div class="card">
+
+            <h2>My Favorite Memory 🌸</h2>
+
+            <p>
+                Every smile, every laugh, every little moment with you is unforgettable.
+            </p>
+
+            <img src="Photos/photo3.jpg">
+
+        </div>
+
+    </section>
+
+    <section class="gallery">
+
+        <div class="photo">
+
+            <img src="Photos/photo4.jpg">
+
+            <p>My Favorite Smile </p>
+
+        </div>
+
+        <div class="photo">
+
+            <img src="Photos/photo5.jpg">
+
+            <p>Forever Together </p>
+
+        </div>
+
+        <div class="photo">
+
+            <img src="Photos/photo6.jpg">
+
+            <p>Beautiful Memories 🌸</p>
+
+        </div>
+
+    </section>
+
+    <section class="reasons-section">
+        <h1
+            style="font-family:Great Vibes;font-size:60px;background: linear-gradient(to right, #ffffff, #a0a0a5);-webkit-background-clip: text;-webkit-text-fill-color: transparent;text-align:center;margin-bottom:20px;">
+            Little Things I Adore About You
+        </h1>
+        <p style="text-align:center; margin-bottom:40px; font-size:18px;">(Hover or tap to reveal)</p>
+
+        <div class="reasons-grid">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">Reason  1</div>
+                    <div class="flip-card-back">Your contagious laugh that brightens my day.</div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">Reason  2</div>
+                    <div class="flip-card-back">How you always know exactly what to say.</div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">Reason  3</div>
+                    <div class="flip-card-back">Your endless kindness to everyone around you.</div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">Reason  4</div>
+                    <div class="flip-card-back">The way you make every small moment feel special.</div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">Reason  5</div>
+                    <div class="flip-card-back">Your incredible strength and beautiful mind.</div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">Reason  6</div>
+                    <div class="flip-card-back">Just simply being you. Never change.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="letter-section">
+
+        <h1
+            style="font-family:Great Vibes;font-size:60px;background: linear-gradient(to right, #ffffff, #a0a0a5);-webkit-background-clip: text;-webkit-text-fill-color: transparent;">
+            A Letter For You
+        </h1>
+
+        <br>
+
+        <button class="chrome-button" onclick="openLetter()">
+
+            Open Me
+
+        </button>
+
+        <div class="letter" id="letter">
+
+            My Dearest,
+
+            <br><br>
+
+            Thank you for being part of my life.
+
+            You make ordinary days feel special.
+
+            Your smile brightens my darkest moments.
+
+            I appreciate every laugh, every conversation,
+            and every memory we've shared.
+
+            I hope we continue creating beautiful memories together,
+            one day at a time.
+
+
+        </div>
+
+    </section>
+
+    <section class="smile-section">
+        <button id="smile-btn" class="chrome-button">In case of a bad day... click here ✨</button>
+    </section>
+
+    <div id="smile-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="typing-text"></h2>
+            <div class="hug-animation">
+                <div class="beating-heart">💖</div>
+            </div>
+            <p id="random-compliment"></p>
+            <button id="another-smile" class="chrome-button">I need another smile</button>
+        </div>
+    </div>
+
+    <footer>
+
+        <a class="back" href="../page1.html">
+            ← Back to Birthday Post
+        </a>
+
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="../bg-effect.js"></script>
+</body>
+
+</html>
